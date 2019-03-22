@@ -1,6 +1,8 @@
 # ConvChainGPU
 
-Vanilla javascript/WebGL2 port of https://github.com/mxgmn/ConvChain
+Vanilla javascript/WebGL2 (GPU) port of [ConvChain](https://github.com/mxgmn/ConvChain).
+
+! TODO link to examples
 
 ## Installing
 
@@ -98,11 +100,23 @@ const convChain = new ConvChainGPU(testSample);
 
 ### Methods
 
-! TODO
+! TODO document the API
+
+### Immutable cells / constraints
+
+It is possible to set immutable cells in the field using `setField()` by passing values above 1. Any cell with a value
+greater than 1 will be left as is by ConvChainGPU. Odd values (2, 4, 6, ...) are considered immutable empty values and
+even values (1, 3, 5, ...) are considered immutable full values.
+
+This feature can be used to generate a labyrinth around a hardcoded dungeon, generate a forest around a hardcoded
+village, generate the inside of hardcoded houses, etc.
+
+! TODO link to an example
 
 ## Roadmap
 
  * When no value is provided, initialize the field with random values on the GPU. This is currently done on the CPU.
+Which is an issue for large field.
 
 ## Changelog
 

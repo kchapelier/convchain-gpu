@@ -1,0 +1,27 @@
+{
+  "name": "convchain-gpu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vanilla javascript/WebGL2 port of https://github.com/mxgmn/ConvChain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kchapelier/convchain-gpu.git"
+  },
+  "keywords": [
+    "pattern",
+    "generation",
+    "markov",
+    "gpgpu",
+    "webgl2"
+  ],
+  "author": "Kevin Chapelier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kchapelier/convchain-gpu/issues"
+  },
+  "homepage": "https://github.com/kchapelier/convchain-gpu#readme"
+}

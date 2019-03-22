@@ -382,3 +382,5 @@ ConvChainGPU.prototype.dispose = function () {
 ConvChainGPU.isSupported = function () {
   return Context.isSupported();
 };
+
+module.exports = ConvChainGPU;
