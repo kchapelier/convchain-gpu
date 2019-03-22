@@ -2,10 +2,17 @@
 
 Vanilla javascript/WebGL2 (GPU) port of [ConvChain](https://github.com/mxgmn/ConvChain).
 
-[Interactive example](http://www.kchapelier.com/convchain-gpu-demo/continous-example.html)
-[Simple example 1](http://www.kchapelier.com/convchain-gpu-demo/simple-example-1.html)
-[Simple example 2](http://www.kchapelier.com/convchain-gpu-demo/simple-example-1.html)
-[Immutable example](http://www.kchapelier.com/convchain-gpu-demo/immutable-example.html)
+[Interactive example](http://www.kchapelier.com/convchain-gpu-demo/continuous-example.html) |
+[Simple example 1](http://www.kchapelier.com/convchain-gpu-demo/simple-example-1.html) |
+[Simple example 2](http://www.kchapelier.com/convchain-gpu-demo/simple-example-2.html) |
+[Immutable example](http://www.kchapelier.com/convchain-gpu-demo/immutable-example.html) |
+
+This implementation takes advantage of the GPU to allow the application of ConvChain on large fields.
+See [benchmark results](https://twitter.com/kchplr/status/1107323645771374592) to see how it fares against the previous
+vanilla javascript (CPU) port.
+
+[Previous port (vanilla javascript / CPU)](https://github.com/kchapelier/convchain) |
+[Codegolfed version (js1k / CPU)](https://js1k.com/2019-x/demo/4069)
 
 ## Installing
 
@@ -148,10 +155,10 @@ village, generate the inside of hardcoded houses, etc.
 ### Implementation details
 
 The [repository of the original implementation](https://github.com/mxgmn/ConvChain) documents how the algorithm works.
-This implementation is was slightly modified in order to take advantage of the GPU.
+This implementation was slightly modified in order to take advantage of the GPU.
 
 Whereas the original implementation update one cell per iteration, here the field is divided in regions of `n` x `n`
-(receptor size) and at each iterations on cells of each region is updated. For example with a field of size 30x30 and
+(receptor size) and at each iteration one cell of each region is updated. For example with a field of size 30x30 and
 a receptor size of 3, the field is divided in 100 regions of 3x3 and at each iteration 100 cells are updated.
 
 ## Roadmap
