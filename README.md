@@ -2,10 +2,10 @@
 
 Vanilla javascript/WebGL2 (GPU) port of [ConvChain](https://github.com/mxgmn/ConvChain).
 
-[http://www.kchapelier.com/convchain-gpu-demo/continous-example.html](Interactive example)
-[http://www.kchapelier.com/convchain-gpu-demo/simple-example-1.html](Simple example 1)
-[http://www.kchapelier.com/convchain-gpu-demo/simple-example-1.html](Simple example 2)
-[http://www.kchapelier.com/convchain-gpu-demo/immutable-example.html](Immutable example)
+[Interactive example](http://www.kchapelier.com/convchain-gpu-demo/continous-example.html)
+[Simple example 1](http://www.kchapelier.com/convchain-gpu-demo/simple-example-1.html)
+[Simple example 2](http://www.kchapelier.com/convchain-gpu-demo/simple-example-1.html)
+[Immutable example](http://www.kchapelier.com/convchain-gpu-demo/immutable-example.html)
 
 ## Installing
 
@@ -143,7 +143,7 @@ even values (1, 3, 5, ...) are considered immutable full values.
 This feature can be used to generate a labyrinth around a hardcoded dungeon, generate a forest around a hardcoded
 village, generate the inside of hardcoded houses, etc.
 
-[http://www.kchapelier.com/convchain-gpu-demo/immutable-example.html](Immutable example)
+[Immutable example](http://www.kchapelier.com/convchain-gpu-demo/immutable-example.html)
 
 ### Implementation details
 
