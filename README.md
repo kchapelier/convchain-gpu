@@ -2,7 +2,10 @@
 
 Vanilla javascript/WebGL2 (GPU) port of [ConvChain](https://github.com/mxgmn/ConvChain).
 
-! TODO link to examples
+[http://www.kchapelier.com/convchain-gpu-demo/continous-example.html](Interactive example)
+[http://www.kchapelier.com/convchain-gpu-demo/simple-example-1.html](Simple example 1)
+[http://www.kchapelier.com/convchain-gpu-demo/simple-example-1.html](Simple example 2)
+[http://www.kchapelier.com/convchain-gpu-demo/immutable-example.html](Immutable example)
 
 ## Installing
 
@@ -112,9 +115,9 @@ Resize the field at the given width and height. Initialize it at the given value
  - *fieldHeight :* Height of the field, an integer greater than 3.
  - *values :* Flat array containing the values to the values to inialiaze the field with.
 
-**convChain.iterate(iterations, n, temperature, seed)**
+**convChain.iterate(iterations, n, temperature[, seed])**
 
-Iterate on the cells. Returns an object implementing the `getUint8Array()` method which can be used to retrieve
+Iterate on and update the cells. Returns an object implementing the `getUint8Array()` method which can be used to retrieve
 the field values as a flat array. This object can also be used with the internal WebGL2 context as used in some of
 the examples.
 
@@ -140,7 +143,7 @@ even values (1, 3, 5, ...) are considered immutable full values.
 This feature can be used to generate a labyrinth around a hardcoded dungeon, generate a forest around a hardcoded
 village, generate the inside of hardcoded houses, etc.
 
-! TODO link to an example
+[http://www.kchapelier.com/convchain-gpu-demo/immutable-example.html](Immutable example)
 
 ### Implementation details
 

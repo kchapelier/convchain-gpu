@@ -1,7 +1,6 @@
 {
   "name": "convchain-gpu",
   "version": "1.0.0",
-  "private": true,
   "description": "Vanilla javascript/WebGL2 port of https://github.com/mxgmn/ConvChain",
   "main": "index.js",
   "scripts": {
