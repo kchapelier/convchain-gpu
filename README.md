@@ -100,7 +100,36 @@ const convChain = new ConvChainGPU(testSample);
 
 ### Methods
 
-! TODO document the API
+**convChain.setSample(sample[, sampleSize])**
+
+Same arguments as the constructor.
+
+**convChain.setField(fieldWidth, fieldHeight[, values])**
+
+Resize the field at the given width and height. Initialize it at the given values if provided, otherwise fill it with random values.
+
+ - *fieldWidth :* Width of the field, an integer greater than 3.
+ - *fieldHeight :* Height of the field, an integer greater than 3.
+ - *values :* Flat array containing the values to the values to inialiaze the field with.
+
+**convChain.iterate(iterations, n, temperature, seed)**
+
+Iterate on the cells. Returns an object implementing the `getUint8Array()` method which can be used to retrieve
+the field values as a flat array. This object can also be used with the internal WebGL2 context as used in some of
+the examples.
+
+ - *iterations :* Number of iterations.
+ - *n :* Receptor size, an integer greater than 0.
+ - *temperature :* Temperature, a float.
+ - *seed :* Seed for the generation of random numbers. This is specifically used in conjunction with the temperature to decide whether one value should be modified.
+
+### Static method
+
+**ConvChainGPU.isSupported()**
+
+Return whether the current environment support the features required to use ConvChainGPU.
+
+Tests the browser support for WebGL2 and the existence of the `EXT_color_buffer_float` extension.
 
 ### Immutable cells / constraints
 
@@ -113,10 +142,19 @@ village, generate the inside of hardcoded houses, etc.
 
 ! TODO link to an example
 
+### Implementation details
+
+The [repository of the original implementation](https://github.com/mxgmn/ConvChain) documents how the algorithm works.
+This implementation is was slightly modified in order to take advantage of the GPU.
+
+Whereas the original implementation update one cell per iteration, here the field is divided in regions of `n` x `n`
+(receptor size) and at each iterations on cells of each region is updated. For example with a field of size 30x30 and
+a receptor size of 3, the field is divided in 100 regions of 3x3 and at each iteration 100 cells are updated.
+
 ## Roadmap
 
- * When no value is provided, initialize the field with random values on the GPU. This is currently done on the CPU.
-Which is an issue for large field.
+ * When no value is provided, initialize the field with random values on the GPU. This is currently done on the CPU. Which is an issue for large field.
+ * See if it is possible to make the original vanilla js API compatible with this port, so that it can be more easily used as a fallback when the user browser doe not support WebGL2.
 
 ## Changelog
 
